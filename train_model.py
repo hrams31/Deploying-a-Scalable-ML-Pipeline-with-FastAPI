@@ -1,8 +1,6 @@
 import os
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
-
 from ml.data import process_data
 from ml.model import (
     compute_model_metrics,
@@ -12,14 +10,15 @@ from ml.model import (
     save_model,
     train_model,
 )
-# TODO: load the cencus.csv data
+
+# TODO: load the census.csv data
 project_path = os.getcwd() 
 data_path = os.path.join(project_path, "data", "census.csv")
 print(data_path)
 data = pd.read_csv(data_path)
 
 # TODO: split the provided data to have a train dataset and a test dataset
-# Optional enhancement, use K-fold cross validation instead of a train-test split.
+# Optional enhancement, use K-fold cross-validation instead of a train-test split.
 train, test = train_test_split(data, test_size=0.3, random_state=1089)
 
 # DO NOT MODIFY
@@ -37,9 +36,9 @@ cat_features = [
 # TODO: use the process_data function provided to process the data.
 X_train, y_train, encoder, lb = process_data(
     train,
-    categorical_features = cat_features,
-    label = "salary",
-    )
+    categorical_features=cat_features,
+    label="salary",
+)
 
 X_test, y_test, _, _ = process_data(
     test,
@@ -59,10 +58,15 @@ save_model(model, model_path)
 encoder_path = os.path.join(project_path, "model", "encoder.pkl")
 save_model(encoder, encoder_path)
 
+# Print messages that the model and encoder have been saved
+print(f"Model saved to {model_path}")
+print(f"Encoder saved to {encoder_path}")
+
 # load the model
-model = load_model(
-    model_path
-) 
+model = load_model(model_path)
+
+# Print message that the model has been loaded
+print(f"Loading model from {model_path}")
 
 # TODO: use the inference function to run the model inferences on the test dataset.
 preds = inference(model, X_test)
