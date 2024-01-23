@@ -76,6 +76,7 @@ def test_process_data_training_mode():
     # Obtain assertions to verify the processed data
     assert isinstance(X, np.ndarray)
     assert isinstance(y, np.ndarray)
-    assert isinstance(encoder, OneHotEncoder)
     assert isinstance(lb, LabelBinarizer)
+    assert isinstance(encoder, OneHotEncoder)
+    
 
