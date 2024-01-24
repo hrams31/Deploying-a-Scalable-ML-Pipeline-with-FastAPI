@@ -1,15 +1,13 @@
+
+
 import pandas as pd
 import numpy as np
 from ml.data import process_data
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.datasets import make_classification
-
 from ml.model import train_model
 from ml.model import compute_model_metrics
-# from ml.model import inference
-
 from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
-
 
 # TODO: implement the first test. Change the function name and input as needed
 
