@@ -11,6 +11,7 @@ from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
 
 # TODO: implement the first test. Change the function name and input as needed
 
+
 def data_input():
     """Obtain data for testing
 
@@ -32,8 +33,6 @@ def data_input():
 
 # test that the trained model is a random forest classifier
 def test_train_model():
-
-
     """Tests to make sure the model is a random classifier model;
     predict attribute is not none."""
     X_train = np.array([[1, 2], [3, 4], [5, 6]])
