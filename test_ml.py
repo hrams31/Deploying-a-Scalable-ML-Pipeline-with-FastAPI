@@ -36,9 +36,10 @@ def data_input():
 
 def test_train_model():
 
+
     """Tests to make sure the model is a random classifier model;
     predict attribute is not none."""
-    
+
     X_train = np.array([[1, 2], [3, 4], [5, 6]])
     y_train = np.array([0, 1, 0])
 
@@ -53,7 +54,6 @@ def test_train_model():
 
 
 def test_compute_model_metrics():
-
 
     # labels
     y_true = np.array([1, 0, 1, 1, 0, 1])
@@ -70,7 +70,6 @@ def test_compute_model_metrics():
 
 # TODO: implement the third test. Change the function name and input as needed
 def test_process_data_training_mode():
-
 
     # get dummy training data
     data = {
