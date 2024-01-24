@@ -37,9 +37,9 @@ def data_input():
 def test_train_model():
 
 
+
     """Tests to make sure the model is a random classifier model;
     predict attribute is not none."""
-
     X_train = np.array([[1, 2], [3, 4], [5, 6]])
     y_train = np.array([0, 1, 0])
 
