@@ -23,8 +23,8 @@ def data_input():
 
     X, y = make_classification(n_samples=1500, n_features=5, random_state=1089)
     input_data = pd.DataFrame(X, columns=['feature_zero', 'feature_one',
-                             'feature_two', 'feature_three',
-                             'feature_four'])
+                                'feature_two', 'feature_three',
+                                'feature_four'])
     input_data['feature_one'] = pd.qcut(input_data['feature_one'], 5,
                                         labels=['a', 'b', 'c', 'd', 'e'])
     input_data['feature_three'] = pd.qcut(input_data['feature_three'], 5,
@@ -35,6 +35,7 @@ def data_input():
 # test that the trained model is a random forest classifier
 
 def test_train_model():
+
 
     """Tests to make sure the model is a random classifier model;
     predict attribute is not none."""
@@ -51,8 +52,9 @@ def test_train_model():
 # TODO: implement the second test. Change the function name and input as needed
 
 def test_compute_model_metrics():
+
     # labels
-    
+
     y_true = np.array([1, 0, 1, 1, 0, 1])
     preds = np.array([1, 0, 1, 0, 0, 1])
 
@@ -66,8 +68,9 @@ def test_compute_model_metrics():
 
 # TODO: implement the third test. Change the function name and input as needed
 def test_process_data_training_mode():
+
     # get dummy training data
-    
+
     data = {
         'feature_one': ['a', 'b', 'c', 'a'],
         'feature_two': [1, 2, 3, 4],
