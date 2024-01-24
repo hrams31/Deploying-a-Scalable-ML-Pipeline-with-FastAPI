@@ -1,7 +1,7 @@
 import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import fbeta_score, precision_score, recall_score
-from ml.data import process_data  # Assuming ml is a package and process_data is a module within that package
+from ml.data import process_data
 import pandas as pd
 
 # TODO: add necessary import
