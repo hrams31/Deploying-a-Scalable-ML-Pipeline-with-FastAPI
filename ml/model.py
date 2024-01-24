@@ -5,6 +5,8 @@ from ml.data import process_data
 
 # TODO: add necessary import
 # Optional: implement hyperparameter tuning.
+
+
 def train_model(X_train, y_train):
     """
     Trains a machine learning model and returns it.
@@ -20,8 +22,8 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
-    
-    
+
+
     # TODO: implement the function
     model = RandomForestClassifier(random_state=1089)
     model.fit(X_train, y_train)
