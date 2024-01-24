@@ -20,6 +20,7 @@ def train_model(X_train, y_train):
     model
         Trained machine learning model.
     """
+    
     # TODO: implement the function
     model = RandomForestClassifier(random_state=1089)
     model.fit(X_train, y_train)
@@ -135,7 +136,11 @@ def performance_on_categorical_slice(
 
     """
     # TODO: implement the function
-    X_slice, y_slice, _, _ = process_data(data, categorical_features, label, training=False, encoder=encoder, lb=lb, column_name=column_name, slice_value=slice_value)
+    X_slice, y_slice, _, _ = process_data(
+    data, categorical_features, label,
+    training=False, encoder=encoder, lb=lb,
+    column_name=column_name,
+    slice_value=slice_value)
 
     # Predictions
     preds = inference(model, X_slice)
