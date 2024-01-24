@@ -1,4 +1,3 @@
-#import os
 import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
@@ -26,24 +25,23 @@ class Data(BaseModel):
     hours_per_week: int = Field(..., example=40, alias="hours-per-week")
     native_country: str = Field(..., example="United-States", alias="native-country")
 
-#Load encoder and model
-path = "model/encoder.pkl" 
+# Load encoder and model
+path = "model/encoder.pkl"
 encoder = load_model(path)
 
-path = "model/model.pkl" 
+path = "model/model.pkl"
 model = load_model(path)
 
-# TODO: create a RESTful API using FastAPI ||
-#Instantiate the app  
+# Instantiate the app
 app = FastAPI()
 
-# TODO: create a GET on the root giving a welcome message ||
+# Create a GET on the root giving a welcome message
 @app.get("/")
 async def get_root():
-    """ Say hello!"""
+    """Say hello!"""
     return {"message": "This is my hello message."}
 
-# TODO: create a POST on a different path that does model inference
+# Create a POST on a different path that does model inference
 @app.post("/data/")
 async def post_inference(data: Data):
     # DO NOT MODIFY: turn the Pydantic model into a dict.
