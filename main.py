@@ -23,11 +23,13 @@ class Data(BaseModel):
     capital_gain: int = Field(..., example=0, alias="capital-gain")
     capital_loss: int = Field(..., example=0, alias="capital-loss")
     hours_per_week: int = Field(..., example=40, alias="hours-per-week")
-    native_country: str = Field(..., example="United-States", alias="native-country")
+    native_country: str = Field(..., example="United-States", 
+                                alias="native-country")
 
 # Load encoder and model
 path = "model/encoder.pkl"
 encoder = load_model(path)
+
 
 path = "model/model.pkl"
 model = load_model(path)
@@ -35,11 +37,13 @@ model = load_model(path)
 # Instantiate the app
 app = FastAPI()
 
+
 # Create a GET on the root giving a welcome message
 @app.get("/")
 async def get_root():
     """Say hello!"""
     return {"message": "This is my hello message."}
+
 
 # Create a POST on a different path that does model inference
 @app.post("/data/")
