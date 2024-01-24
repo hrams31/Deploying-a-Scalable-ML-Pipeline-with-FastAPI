@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from ml.data import process_data
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
 
 from ml.model import train_model
 from ml.model import compute_model_metrics
@@ -13,7 +14,7 @@ from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
 # TODO: implement the first test. Change the function name and input as needed
 
 def data_input():
-    """ Obtain data for testing
+    """Obtain data for testing
 
     Returns:
 
@@ -34,10 +35,8 @@ def data_input():
 # test that the trained model is a random forest classifier
 
 def test_train_model():
-
-
-    """ Tests to make sure the model is a random classifer model;
-    predict attribut is not none."""
+    """Tests to make sure the model is a random classifier model;
+    predict attribute is not none."""
     X_train = np.array([[1, 2], [3, 4], [5, 6]])
     y_train = np.array([0, 1, 0])
 
@@ -51,9 +50,7 @@ def test_train_model():
 # TODO: implement the second test. Change the function name and input as needed
 
 def test_compute_model_metrics():
-
     # labels
-
     y_true = np.array([1, 0, 1, 1, 0, 1])
     preds = np.array([1, 0, 1, 0, 0, 1])
 
@@ -67,7 +64,6 @@ def test_compute_model_metrics():
 
 # TODO: implement the third test. Change the function name and input as needed
 def test_process_data_training_mode():
-
     # get dummy training data
     data = {
         'feature_one': ['a', 'b', 'c', 'a'],
