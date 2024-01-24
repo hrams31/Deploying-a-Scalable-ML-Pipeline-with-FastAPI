@@ -18,7 +18,9 @@ Data comes from the 1994 Census data. It was originally extracted by Barry Becke
 
 _Include information about the source, size, and characteristics of the evaluation data._
 
+The data set was split into a training and test data set with 80% training and 20% test data. 
 
+Both sets of data were processed using one-hot encoding and binary labeliztion of the categorical features. 
 
 
 **************************************
