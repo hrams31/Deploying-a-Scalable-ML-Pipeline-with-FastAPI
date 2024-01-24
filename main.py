@@ -26,10 +26,9 @@ class Data(BaseModel):
     native_country: str = Field(..., example="United-States",
                                 alias="native-country")
 
+
 # Load encoder and model
 path = "model/encoder.pkl"
-
-
 encoder = load_model(path)
 
 
