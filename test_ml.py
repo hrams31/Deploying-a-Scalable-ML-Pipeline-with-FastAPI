@@ -32,6 +32,8 @@ def data_input():
     return input_data
 
 # test that the trained model is a random forest classifier
+
+
 def test_train_model():
     """Tests to make sure the model is a random classifier model;
     predict attribute is not none."""
