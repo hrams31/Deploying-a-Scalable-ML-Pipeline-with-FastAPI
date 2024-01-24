@@ -1,4 +1,4 @@
-import pytest
+#import pytest
 import pandas as pd
 import numpy as np
 from ml.data import process_data 
@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 from ml.model import train_model
 from ml.model import compute_model_metrics
-from ml.model import inference
+#from ml.model import inference
 
 from sklearn.preprocessing import OneHotEncoder, LabelBinarizer
 
@@ -20,7 +20,7 @@ def data_input():
     
     pd.DataFrame -- holds the testing data
     """
-    
+   
     X, y = make_classification(n_samples=1500, n_features=5, random_state=1089)
     input_data = pd.DataFrame(X, columns=['feature_zero', 'feature_one', 'feature_two', 'feature_three', 'feature_four'])
     input_data['feature_one'] = pd.qcut(input_data['feature_one'], 5, labels=['a', 'b', 'c', 'd', 'e'])
@@ -57,10 +57,7 @@ def test_compute_model_metrics():
     assert isinstance(recall, float)
     assert isinstance(fbeta, float)
 
-
 # TODO: implement the third test. Change the function name and input as needed
-
-
 def test_process_data_training_mode():
     # get dummy training data
     data = {
@@ -78,5 +75,3 @@ def test_process_data_training_mode():
     assert isinstance(y, np.ndarray)
     assert isinstance(lb, LabelBinarizer)
     assert isinstance(encoder, OneHotEncoder)
-    
-

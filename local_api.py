@@ -1,4 +1,4 @@
-import json
+#import json
 
 import requests
 
@@ -14,14 +14,9 @@ get_response = requests.get(r)
 
 print("GET Status Code:", get_response.status_code)
 
-
-
-
 # TODO: print the welcome message
 
 print("GET Result:", get_response.json())
-
-
 
 data = {
     "age": 37,
@@ -47,13 +42,9 @@ r = "http://127.0.0.1:8000/data/"
 
 post_response = requests.post(r, json=data)
 
-
-
 # TODO: print the status code
 
 print("POST Status Code:", post_response.status_code)
-
-
 
 # TODO: print the result
 
