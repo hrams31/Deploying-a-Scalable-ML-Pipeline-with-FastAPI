@@ -28,4 +28,5 @@ jobs:
         run: pytest
 
       - name: Run flake8
-        run: flake8  ml/model.py main.py local_api.py test_ml.py train_model.py
+        run: flake8 ml/model.py main.py local_api.py test_ml.py train_model.py
+
